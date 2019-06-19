@@ -1,10 +1,13 @@
-.PHONY: install test check
+.PHONY: install test check update_autoload
 
 install:
-	composer install
+	hhvm ~/Workspace/bin/composer.phar install
 
 check:
 	hh_client
 
-test:
-	 hhvm vendor/bin/phpunit -c phpunit.xml
+test: check
+	 hhvm vendor/bin/hacktest tests/
+
+update_autoload:
+	./vendor/bin/hh-autoload

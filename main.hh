@@ -1,3 +1,3 @@
 <?hh
 
-require 'vendor/autoload.php';
+require 'vendor/hh_autoload.php';
