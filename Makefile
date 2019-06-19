@@ -6,8 +6,9 @@ install:
 check:
 	hh_client
 
-test: check
-	 hhvm vendor/bin/hacktest tests/
-
 update_autoload:
 	./vendor/bin/hh-autoload
+
+test: update_autoload check
+	 hhvm vendor/bin/hacktest tests/
+
