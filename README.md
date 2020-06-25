@@ -25,5 +25,7 @@ apt-get install hhvm
 
 ## General Usage
 `make install` - installs base libraries listed in the `composer.json` file
+
 `make update` - updates all libraries listed in the `composer.json` file
+
 `make test` - runs the autoloader, runs the hhvm static type checker `hh_client`, and then invokes `hacktest`
